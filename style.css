@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #130F1E;
+
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    gap: 16px;
+}
+#app{
+    max-width: 800px;
+    padding-inline: 40px;
+}
+h1{
+    font-family: "Inter",sans-serif;
+    color: white;
+    font-size: 32px;
+}
+p{
+    margin-top: 8px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    opacity: 0.7;
+}
+main{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+div{
+    display: grid;
+    place-content: center;
+    gap: 16px;
+}
+
+.primary{
+    --bg-default: #8257E5;
+    --bg-hover: #9674e5;
+}
+.secondary{
+    --bg-default: #3C3748;
+    --bg-hover: #6A617F;
+}
+.tertiary{
+    --bg-default: transparent;
+    --bg-hover: transparent;
+}
+
+button{
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-default);
+    border: 0;
+    color:white;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 25px;
+    border-radius: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+button:hover{
+    background-color: var(--bg-hover);
+}
+button:focus{
+    outline: 2px solid #D9CDF7;
+}
+button:disabled{
+    background-color: var(--bg-default);
+    opacity: 0.56;
+    cursor: not-allowed;
+}
+.loading{
+    cursor: progress;
+}
+.loading i{
+    font-size: 16px;
+    animation: spin 700ms infinite linear;
+    cursor: pr;
+}
+.movable{
+    cursor: move;
+}
+.movable i{
+    font-size: 18px;
+}
+
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+
